@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For koko bhone<3</title>
+  <link rel="icon" type="image/x-icon" href="me.jpg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Space Mono', monospace;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+
+    .quiz-option {
+      display: block;
+      margin: 15px 0;
+      padding: 10px 15px;
+      border: 2px solid #66a6ff;
+      border-radius: 10px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .quiz-option:hover {
+      background-color: #66a6ff;
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hidden-message {
+      display: none;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Quiz Timeee!</h1>
+    <p>What's my favorite song?</p>
+    <div class="quiz-option" data-answer="wrong">1. "Shape of You"</div>
+    <div class="quiz-option" data-answer="right">2. "Pocketlocket"</div>
+    <div class="quiz-option" data-answer="wrong">3. "I like you the most"</div>
+
+    <div class="hidden-message" id="message">
+       You are correctt! Happy National Boyfriend’s Day, Koko! I can’t believe it’s almost been seven
+       months since we started. What a bummar that we couldn't meet in real life. I give u this website soo you can look back at it since I can't give u a crochet gift either since we live farr away but I still want to give a handmade gift soo here is the websitee woooo! 
+       This is not like a product or like a car website but more of a memory website. I just want you to know that I love you soo much alott alott and 
+       I care about you alot. I know it doesn't look that good but I still hope you like it and I hope we can continue this journey until we are veryy veryy old. Love youu darlingg!
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const quizOptions = document.querySelectorAll('.quiz-option');
+    const message = document.getElementById('message');
+
+    quizOptions.forEach(option => {
+      option.addEventListener('click', function() {
+        if (this.dataset.answer === 'right') {
+          message.style.display = 'block';
+        } else {
+          alert('Seriouslyy??You dont love me anymore-_-!'); 
+        }
+      });
+    });
+  </script>
+</body>
+</html>
